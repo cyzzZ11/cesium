@@ -1,0 +1,12 @@
+.cesium-3d-map-checkbox {
+  border: 1px solid var(--darkBorderColor);
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cesium-3d-map-checkbox > svg > path {
+  fill: var(--darkTextColor) !important;
+}

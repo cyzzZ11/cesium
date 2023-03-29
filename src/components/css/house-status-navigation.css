@@ -1,0 +1,37 @@
+.house-status-main-ui {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+.house-status-main-ui > .house-status-navigation-array {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.house-status-main-ui > .house-status-navigation-array > .house-status-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.house-status-main-ui > .house-status-navigation-array > .house-status-Chinese-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-shadow: #000 1px 0 0, #000 0 1px 0, #000 -1px 0 0, #000 0 -1px 0;
+}
+.house-status-main-ui > .icon-navigation {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  bottom: -8px;
+  cursor: pointer;
+  pointer-events: auto;
+}

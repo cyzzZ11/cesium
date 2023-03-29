@@ -1,0 +1,111 @@
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.main-ui {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  display: flex;
+}
+
+.main-ui .tool-navigation-box {
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 9%;
+  bottom: 1vw;
+  left: 0.5vw;
+  right: 0;
+  pointer-events: none;
+}
+
+.main-ui .administrative-navigation-box {
+  width: 22.5%;
+  height: 45%;
+  position: absolute;
+  top: 9%;
+  right: 95px;
+}
+
+.main-ui .house-status-navigation-box {
+  width: 32vw;
+  height: 5vw;
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  pointer-events: none;
+}
+
+.main-ui .bottom-box-1 {
+  width: 30vw;
+  height: 1.5vw;
+  position: absolute;
+  bottom: 1.5vw;
+  left: 35%;
+  text-align: left;
+  display: flex;
+  color: white;
+  font-size: 1vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 1vw;
+  border-radius: 0.5vw 0.5vw 0 0;
+}
+.main-ui .bottom-box-1 > .son-1,
+.main-ui .bottom-box-2 > .son-1 {
+  width: 33.333333%;
+  height: 100%;
+}
+
+.main-ui .bottom-box-1 > .son-2 {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+}
+
+.main-ui .bottom-box-1 > .son-2 > .info {
+  width: 50%;
+  height: 100%;
+}
+
+.main-ui .bottom-box-1 > .son-2 > .info > input {
+  width: 3vw;
+}
+
+.main-ui .bottom-box-2 {
+  width: 30vw;
+  height: 1.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  text-align: left;
+  display: flex;
+  color: white;
+  font-size: 1vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 1vw;
+  border-radius: 0 0 0.5vw 0.5vw;
+}
+
+.main-ui input {
+  background-color: var(--darkBackgroundColor);
+  border-color: var(--darkBorderColor);
+  color: var(--darkTextColor);
+}
+
+#cesiumContainer {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: black;
+}

@@ -1,0 +1,102 @@
+.cesium-3d-map-table .el-dialog__wrapper::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.05vw;
+} /*滚动条整体样式 高宽分别对应横竖滚动条的尺寸*/
+.cesium-3d-map-table .el-dialog__wrapper::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  -webkit-box-shadow: inset 0 0 0.25vw rgba(0, 0, 0, 0.2);
+  background: var(--darkBorderColor);
+} /*滚动条里面小方块*/
+.cesium-3d-map-table .el-dialog__wrapper::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.25vw rgba(0, 0, 0, 0.2);
+  border-radius: 0.5vw;
+  background: var(--darkBackgroundColor);
+} /*滚动条里面轨道*/
+
+.cesium-3d-map-table .el-dialog__wrapper {
+  left: auto !important;
+  bottom: auto !important;
+  width: 27.5% !important;
+  height: 89% !important;
+  top: 9% !important;
+  background-color: var(--darkBackgroundColor) !important ;
+}
+
+/* 背景颜色 */
+.cesium-3d-map-table .el-dialog {
+  width: calc(100% - 1vw) !important;
+  height: 100% !important;
+  margin: 0 0.5vw 0 0.5vw !important;
+  pointer-events: auto !important;
+  max-height: none !important;
+}
+
+.cesium-3d-map-table .el-dialog,
+.cesium-3d-map-table .el-pager li {
+  background-color: var(--darkBackgroundColor) !important;
+}
+
+/* 标题文字颜色 */
+.cesium-3d-map-table .el-dialog__title {
+  color: white !important;
+  font-size: calc((0.9 + var(--addFontSize)) * var(--unit)) !important;
+}
+
+/* 关闭按钮颜色 */
+.cesium-3d-map-table .el-dialog__headerbtn .el-dialog__close {
+  color: white !important;
+}
+
+/* 标题和内容间距 */
+.cesium-3d-map-table .el-dialog__header {
+  padding: 0.5vw 0 0 0.5vw !important;
+}
+
+.cesium-3d-map-table .el-table {
+  background-color: transparent !important;
+}
+
+/* 内容和四周间距 */
+.cesium-3d-map-table .el-dialog__body {
+  padding: 0.5vw !important;
+  max-height: none !important;
+}
+
+/* 表头颜色 */
+.cesium-3d-map-table .el-table th.el-table__cell {
+  background-color: var(--darkBackgroundColor) !important;
+}
+
+/* 选中颜色 */
+.cesium-3d-map-table .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.cesium-3d-map-table .el-table tr {
+  background-color: transparent !important;
+}
+
+/* 分割线 */
+.cesium-3d-map-table .el-table td.el-table__cell,
+.cesium-3d-map-table .el-table th.el-table__cell.is-leaf {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 底部分割线 */
+.cesium-3d-map-table .el-table--border::after,
+.cesium-3d-map-table .el-table--group::after,
+.cesium-3d-map-table .el-table::before {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 文字颜色 */
+.cesium-3d-map-table .el-table .cell,
+.cesium-3d-map-table .el-table--border .el-table__cell:first-child .cell {
+  color: white !important;
+  line-height: 1.2vw !important;
+  font-size: calc((0.825 + var(--addFontSize)) * var(--unit)) !important;
+}
+
+.cesium-3d-map-table .el-table .el-table__cell {
+  padding: 0 !important;
+}

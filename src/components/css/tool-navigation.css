@@ -1,0 +1,193 @@
+.tool-main-ui {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.tool-main-ui > .navigation-1 {
+  width: 3.8vw;
+  margin-right: 1vw;
+}
+
+.tool-main-ui > .navigation-1 > .item {
+  pointer-events: auto;
+  width: 100%;
+  height: 1.875vw;
+  margin-bottom: 0.521vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.15vw;
+  background-color: var(--darkBackgroundColor);
+  cursor: pointer;
+}
+
+.tool-main-ui > .navigation-1 > .item:hover {
+  background-color: var(--darkBackgroundColorHover);
+}
+
+.tool-main-ui > .navigation-1 > .hover {
+  background-color: var(--darkBackgroundColorHover);
+}
+
+.tool-main-ui > .navigation-1 > .item > .image {
+  width: 1vw;
+  height: auto;
+}
+
+.tool-main-ui > .navigation-1 > .item > .image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-main-ui > .navigation-1 > .item > .font {
+  height: 0.833vw;
+  font-size: 0.833vw;
+  margin-left: 0.13vw;
+  margin-bottom: 0.326vw;
+  color: var(--darkTextColor);
+}
+
+.tool-main-ui > .navigation-2 {
+  width: 10.4vw;
+  margin-right: 1vw;
+}
+
+.tool-main-ui > .navigation-2 > .tree {
+  pointer-events: auto;
+  max-height: 33.65vw;
+  border-top: 0.26vw solid var(--darkBackgroundColor);
+  border-bottom: 0.26vw solid var(--darkBackgroundColor);
+  overflow: auto;
+}
+
+.tool-main-ui > .navigation-2 > .tree::-webkit-scrollbar {
+  width: 0.5vw;
+  height: 0.05vw;
+} /*滚动条整体样式 高宽分别对应横竖滚动条的尺寸*/
+.tool-main-ui > .navigation-2 > .tree::-webkit-scrollbar-thumb {
+  border-radius: 0.5vw;
+  -webkit-box-shadow: inset 0 0 0.25vw rgba(0, 0, 0, 0.2);
+  background: var(--darkBorderColor);
+} /*滚动条里面小方块*/
+.tool-main-ui > .navigation-2 > .tree::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0.25vw rgba(0, 0, 0, 0.2);
+  border-radius: 0.5vw;
+  background: var(--darkBackgroundColor);
+} /*滚动条里面轨道*/
+
+.tool-main-ui > .navigation-2 > .measure {
+  pointer-events: auto;
+  background-color: var(--darkBackgroundColor);
+  padding: 0 7.5%;
+  font-size: 0.9vw;
+  border-top: 0.26vw solid var(--darkBackgroundColor);
+  border-bottom: 0.26vw solid var(--darkBackgroundColor);
+}
+
+.tool-main-ui > .navigation-2 > .title {
+  font-size: 0.9vw;
+  padding: 0 7.5%;
+  height: 2.135vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkBackgroundColor);
+  border-bottom: 1px solid var(--darkTextColor);
+  pointer-events: auto;
+}
+
+.tool-main-ui > .navigation-2 > .title > .son-1 {
+  width: 90%;
+  height: 60%;
+  color: var(--darkTextColor);
+  cursor: default;
+}
+.tool-main-ui > .navigation-2 > .title > .icon-close {
+  cursor: pointer;
+}
+
+.tool-main-ui .icon-close > svg > path {
+  fill: var(--darkTextColor) !important;
+}
+
+.tool-main-ui > .navigation-2 .content {
+  width: auto;
+  padding: 0.521vw 0.78125vw;
+  background-color: #fff;
+  color: var(--darkTextColor);
+  font-size: 0.833vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  border-top: 0.26vw solid var(--darkBackgroundColor);
+  border-bottom: 0.26vw solid var(--darkBackgroundColor);
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.tool-main-ui > .navigation-2 > .none-hover {
+  cursor: default;
+}
+
+/* .tool-main-ui > .navigation-2 > .none-hover:hover {
+  background-color: var(--darkBackgroundColor) !important;
+} */
+
+/* .tool-main-ui > .navigation-2 .content:hover {
+  background-color: var(--darkBackgroundColorHover);
+} */
+
+.tool-main-ui > .navigation-2 > .hover {
+  background-color: var(--darkBackgroundColorHover);
+}
+
+.tool-main-ui > .navigation-2 .content > .checkbox {
+  width: 0.8vw;
+  height: 0.8vw;
+  margin-right: 0.5vw;
+}
+
+.tool-main-ui > .navigation-2 .content > .image {
+  width: 1vw;
+  height: auto;
+}
+
+.tool-main-ui > .navigation-2 .content > .image > img {
+  width: 100%;
+  height: 100%;
+}
+
+.tool-main-ui > .navigation-2 .content > .font {
+  width: auto;
+  height: 0.833vw;
+  font-size: 0.833vw;
+  margin-left: 0.52vw;
+  margin-bottom: 0.326vw;
+  color: var(--darkTextColor);
+}
+
+.tool-main-ui > .navigation-2 > .space {
+  width: 100%;
+  height: 0.26vw;
+  background-color: var(--darkBackgroundColor);
+  pointer-events: auto;
+}
+
+.tool-main-ui > .icon-tool-navigation {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 8px;
+  top: -24px;
+  cursor: pointer;
+  pointer-events: auto;
+}

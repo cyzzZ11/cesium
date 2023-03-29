@@ -1,0 +1,10 @@
+{"type":"FeatureCollection", "features": [
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39682064180779, 27.34954058573594]},"properties":{"LYZK":1,"UserID":0,"name":"停车场"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39615177943195, 27.352043810568458]},"properties":{"LYZK":2,"UserID":0,"name":"鱼塘"}},
+
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39650824940532, 27.351119433150577]},"properties":{"LYZK":5,"UserID":0,"name":"休闲广场"}},
+
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39529951042957, 27.352265056557678]},"properties":{"LYZK":7,"UserID":0,"name":"宅基地预留地"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39517437803305, 27.351710087793774]},"properties":{"LYZK":8,"UserID":0,"name":"垃圾收集点"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[115.39500973494234, 27.349918158613638]},"properties":{"LYZK":6,"UserID":0,"name":"厂房"}}
+]}
