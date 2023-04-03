@@ -7,6 +7,7 @@
             <div class="none-hover content">
               <div class="cesium-3d-map-checkbox checkbox" @click="toolNavigationGet()">
                 <svg
+                  v-if="isWorldMap"
                   t="1678071494324"
                   class="icon"
                   viewBox="0 0 1024 1024"
@@ -43,13 +44,93 @@
               </div>
               <div class="font">天地图</div>
             </div>
+            <div class="none-hover content">
+              <div class="cesium-3d-map-checkbox checkbox" @click="changeShow('3d')">
+                <svg
+                  v-if="dshow"
+                  t="1678071494324"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="2378"
+                  width="14"
+                  height="14"
+                >
+                  <path
+                    d="M887.904 298.208c-12.864-12.064-33.152-11.488-45.216 1.408L415.936 753.984l-233.12-229.696c-12.608-12.416-32.864-12.288-45.28 0.32-12.416 12.576-12.256 32.864 0.352 45.248l256.48 252.672c0.096 0.096 0.224 0.128 0.32 0.224s0.128 0.224 0.224 0.32c2.016 1.92 4.448 3.008 6.784 4.288 1.152 0.672 2.144 1.664 3.36 2.144 3.776 1.472 7.776 2.24 11.744 2.24 4.192 0 8.384-0.832 12.288-2.496 1.312-0.544 2.336-1.664 3.552-2.368 2.4-1.408 4.896-2.592 6.944-4.672 0.096-0.096 0.128-0.256 0.224-0.352 0.064-0.096 0.192-0.128 0.288-0.224L889.28 343.424c12.16-12.832 11.488-33.088-1.376-45.216z"
+                    fill
+                    p-id="2379"
+                  />
+                </svg>
+              </div>
+              <div class="image">
+                <svg
+                  t="1647010760045"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="5024"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M889.18 180.37l-224-66.81a24 24 0 0 0-12.85-0.26L396.32 179l-245.51-53.23A32 32 0 0 0 112 157v666.2a32 32 0 0 0 25 31.22l255.27 57.33a24 24 0 0 0 11.17-0.15l253.89-64.24L870.68 912A32 32 0 0 0 912 881.4V211a32 32 0 0 0-22.82-30.63zM840 827.41l-180.93-54.77L433 829.84V516a36 36 0 0 0-72 0v314.94l-177-39.73V206.68L397.68 253 622 195.41V512a36 36 0 0 0 72 0V197.3l146 43.5z"
+                    p-id="5025"
+                    fill="#e6e6e6"
+                  />
+                </svg>
+              </div>
+              <div class="font">村3D模型</div>
+            </div>
+            <div class="none-hover content">
+              <div class="cesium-3d-map-checkbox checkbox" @click="changeShow('dltb')">
+                <svg
+                  v-if="dltb"
+                  t="1678071494324"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="2378"
+                  width="14"
+                  height="14"
+                >
+                  <path
+                    d="M887.904 298.208c-12.864-12.064-33.152-11.488-45.216 1.408L415.936 753.984l-233.12-229.696c-12.608-12.416-32.864-12.288-45.28 0.32-12.416 12.576-12.256 32.864 0.352 45.248l256.48 252.672c0.096 0.096 0.224 0.128 0.32 0.224s0.128 0.224 0.224 0.32c2.016 1.92 4.448 3.008 6.784 4.288 1.152 0.672 2.144 1.664 3.36 2.144 3.776 1.472 7.776 2.24 11.744 2.24 4.192 0 8.384-0.832 12.288-2.496 1.312-0.544 2.336-1.664 3.552-2.368 2.4-1.408 4.896-2.592 6.944-4.672 0.096-0.096 0.128-0.256 0.224-0.352 0.064-0.096 0.192-0.128 0.288-0.224L889.28 343.424c12.16-12.832 11.488-33.088-1.376-45.216z"
+                    fill
+                    p-id="2379"
+                  />
+                </svg>
+              </div>
+              <div class="image">
+                <svg
+                  t="1647010760045"
+                  class="icon"
+                  viewBox="0 0 1024 1024"
+                  version="1.1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  p-id="5024"
+                  width="16"
+                  height="16"
+                >
+                  <path
+                    d="M889.18 180.37l-224-66.81a24 24 0 0 0-12.85-0.26L396.32 179l-245.51-53.23A32 32 0 0 0 112 157v666.2a32 32 0 0 0 25 31.22l255.27 57.33a24 24 0 0 0 11.17-0.15l253.89-64.24L870.68 912A32 32 0 0 0 912 881.4V211a32 32 0 0 0-22.82-30.63zM840 827.41l-180.93-54.77L433 829.84V516a36 36 0 0 0-72 0v314.94l-177-39.73V206.68L397.68 253 622 195.41V512a36 36 0 0 0 72 0V197.3l146 43.5z"
+                    p-id="5025"
+                    fill="#e6e6e6"
+                  />
+                </svg>
+              </div>
+              <div class="font">地类图斑</div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="house-status-navigation-box">
+      <!-- <div class="house-status-navigation-box">
         <houseStatusNavigation></houseStatusNavigation>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -58,21 +139,21 @@
  
 <script setup>
 import * as Cesium from 'cesium';
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import axiosMain from 'axios';
 import houseStatusNavigation from './components/house-status-navigation.vue';
 let axios = axiosMain.create();
-const isWorldMap = false
+const isWorldMap = ref(true)
 function toolNavigationGet () {
   console.log('%c [ toolNavigationGet ]-311', 'font-size:13px; background:pink; color:#bf2c9f;')
   const self = this;
   if (window.viewer != null) {
-    self.isWorldMap = !window.viewer.imageryLayers.get(0).show;
-    window.viewer.imageryLayers.get(0).show = self.isWorldMap;
+    isWorldMap.value = !window.viewer.imageryLayers.get(0).show;
+    window.viewer.imageryLayers.get(0).show = isWorldMap.value;
     // 显式渲染新帧
     window.viewer.scene.requestRender();
     // self.setOtherSelf('isWorldMap');
-    return self.isWorldMap;
+    return isWorldMap.value;
   } else {
     return null;
   }
@@ -81,24 +162,9 @@ function updateHighlight () {
   // 3dtiles
   // 改变颜色
   if (window.earth3dFeature != null) {
-    if (window.earth3dFeature instanceof Cesium.Cesium3DTileFeature) {
-      window.earth3dFeature.color = new Cesium.Color(1, 1, 1, 0.00393);
-      window.earth3dFeature = null;
-    } else if (window.earth3dFeature instanceof Cesium.Entity) {
-      window.earth3dFeature.polygon.material = new Cesium.Color(1, 1, 1, 0.00393);
-      window.earth3dFeature = null;
-    } else if (window.earth3dFeature instanceof Cesium.PrimitiveCollection) {
-      window.earth3dFeature.destroy();
-      window.earth3dFeature = null;
-    } else if (window.earth3dFeature.type == 'administrative') {
-      window.earth3dFeature.primitiveCollection.destroy();
-      window.earth3dFeature.label.show = true;
-      window.earth3dFeature = null;
-    } else {
-      debugConsole.log('window.earth3dFeature', window.earth3dFeature);
-    }
-    // 显式渲染新帧
-    window.earth3dViewer.scene.requestRender();
+    window.earth3dFeature.color = new Cesium.Color(1, 1, 1, 0.00393);
+    window.earth3dFeature = null;
+    window.viewer.scene.requestRender();
   }
 }
 function getPropertyObject (cesium3dtilesFeature) {
@@ -112,9 +178,21 @@ function getPropertyObject (cesium3dtilesFeature) {
   return propertyObject;
 }
 const self = this;
-console.log('%c [ self ]-105', 'font-size:13px; background:pink; color:#bf2c9f;', self)
+const tileset = ref()
+const dshow = ref(true)
+const dltb = ref(false)
+function changeShow (r) {
+  if (r === '3d') {
+    dshow.value = !tileset.value.show
+    tileset.value.show = !tileset.value.show
+  }
+  if (r === 'dltb') {
+    dltb.value = !window.earth3dSimpleModel.show
+    window.earth3dSimpleModel.show = !window.earth3dSimpleModel.show
 
-
+  }
+  window.viewer.scene.requestRender();
+}
 
 
 
@@ -124,7 +202,7 @@ onMounted(async () => {
   console.log('%c [ self ]-106', 'font-size:13px; background:pink; color:#bf2c9f;', self)
   const isWorldMap = false
   const earthHttpString = 'http://120.24.61.35:8301';
-  const earthHttpStringOld = '/gis/3dtiles/yongfen';
+  const earthHttpStringOld = '/gis/3dtiles/deqing';
   // 创建map配置项
   const mapOptions = {
     animation: false, // 是否显示动画控件
@@ -145,42 +223,75 @@ onMounted(async () => {
   }
   window.viewer = new Cesium.Viewer('cesiumContainer', mapOptions);
 
+  window.viewer.terrainProvider = new Cesium.CesiumTerrainProvider({
+    url: earthHttpString + earthHttpStringOld + '/zhejianghuzhou'
+  });
+  tileset.value = window.viewer.scene.primitives.add(
+    new Cesium.Cesium3DTileset({
+      url: 'http://120.24.61.35:8301/gis/3dtiles/deqing-all/tileset.json',
+    })
+  );
+  // 地类图斑
+  window.earth3dSimpleModel = {}
+  // debugger
+  window.earth3dSimpleModel = new Cesium.ImageryLayer(
+    new Cesium.WebMapServiceImageryProvider({
+      url: 'http://47.103.97.250:8080/geoserver/ows',
+      layers: "zjddeqing_sy:dltbpub",
+      parameters: {
+        service: 'WMS',
+        version: '1.1.1',
+        format: 'image/png',
+        layers: 'zjddeqing_sy:dltbpub',
+        styles: 'baseStyles:dltb',
+        transparent: true,
+        width: 512,
+        height: 512,
+        srs: 'EPSG:4490'
+      },
+      enablePickFeatures: false
+    }),
+    {
+      show: false
+    }
+  );
+  window.viewer.imageryLayers.add(window.earth3dSimpleModel);
+
   window.earth3dFeature = null
   // 点击
   const handler = new Cesium.ScreenSpaceEventHandler(window.viewer.scene.canvas);
   handler.setInputAction((clickEvent) => {
-    debugger
-    console.log('%c [ clickEvent ]-82', 'font-size:13px; background:pink; color:#bf2c9f;', clickEvent)
+    // debugger
     const pick = window.viewer.scene.pick(clickEvent.position);
-
+    updateHighlight()
     console.log('%c [ pick ]-110', 'font-size:13px; background:pink; color:#bf2c9f;', pick)
     if (pick != null) {
-      // const computedMonomerCustomize = self.computedMonomerCustomize();
+
       window.earth3dFeature = pick;
       window.earth3dFeature.color = Cesium.Color.clone(new Cesium.Color(54 / 255.0, 218 / 255.0, 193 / 255.0, 0.6));
-      // getPropertyObject(pick)
-
-      console.log('%c [ pick.getProperty("name"); ]-162', 'font-size:13px; background:pink; color:#bf2c9f;', pick.getProperty("name"))
+      console.log('%c [ getPropertyObject(pick) ]-163', 'font-size:13px; background:pink; color:#bf2c9f;', getPropertyObject(pick))
+      let data = getPropertyObject(pick)
+      alert(`
+      姓名：${data.bz}
+      地址：${data.zl}
+      宅基地代码：${data.zjddm}`)
     }
+
     window.viewer.scene.requestRender();
+
   }, Cesium.ScreenSpaceEventType.LEFT_CLICK)
 
 
 
-  // window.viewer.terrainProvider = new Cesium.CesiumTerrainProvider({
-  //   url: earthHttpString + earthHttpStringOld + '/terrainJiang1Xi1Ji1An1'
-  // });
-  const tileset = window.viewer.scene.primitives.add(
-    new Cesium.Cesium3DTileset({
-      url: earthHttpString +
-        earthHttpStringOld +
-        '/townKen1Tian2/villageTang2Xia4/home1Tang2Xia4/tileset.json',
-    })
-  );
 
   // 定位到初始位置
   window.viewer.camera.flyTo({
-    destination: Cesium.Cartesian3.fromDegrees(115.3962588, 27.3510000, 600.0)
+    destination: Cesium.Cartesian3.fromDegrees(119.9257227, 30.564002, 600.0),
+    orientation: {
+      heading: Cesium.Math.toRadians(0.0), // 指向
+      pitch: Cesium.Math.toRadians(-42.5), // 视角
+      roll: 0.0,
+    },
   });
 
 
@@ -231,9 +342,8 @@ onMounted(async () => {
   // 加载 3dtiles 单体化
   window.earth3dMonomer = new Cesium.Cesium3DTileset({
     shadows: Cesium.ShadowMode.DISABLED, // 取消阴影 增加性能
-    url: earthHttpString + earthHttpStringOld + '/monomerizationYong3Fen1/tileset.json',
-    classificationType: Cesium.ClassificationType.CESIUM_3D_TILE,
-    maximumScreenSpaceError: 2
+    url: earthHttpString + earthHttpStringOld + '/deqingdantihua/tileset.json',
+    classificationType: Cesium.ClassificationType.CESIUM_3D_TILE
   });
   window.earth3dMonomer.style = new Cesium.Cesium3DTileStyle({
     color: 'rgba(1, 1, 1, 0.00393)'
